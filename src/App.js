@@ -21,7 +21,8 @@ const App = () => {
             setMovie('')
             setImg('#')
             setFrating('')
-            axios.post('http://127.0.0.1:5000/review',{search:search.replace(" ","")}).then(({data:{img,movieName,list,frating}})=>{
+            let url = 'http://127.0.0.1:5000/review'
+            axios.post("https://imdbscrapperflask.herokuapp.com/review",{search:search.replace(" ","")}).then(({data:{img,movieName,list,frating}})=>{
                 setLoading(false)
                 setImg(img)
                 setMovie(movieName)
