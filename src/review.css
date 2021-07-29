@@ -1,0 +1,33 @@
+
+.reviewCard{
+    display:flex;
+    flex-direction: column;
+    padding:20px;
+    margin:20px;
+    background-color: rgba(240, 248, 255, 0.199);
+    box-shadow: 2px 1px 1px 2px #eff5edc5;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+
+.reviewCard:hover{
+    box-shadow: 1px 3px 3px 1px #1143e954;
+    border-color: black;
+}
+
+.userDetail{
+    display:flex;
+    align-items: center;
+    padding:15px;
+}
+
+h2{
+    margin-right: 20px;
+    
+}
+
+p{
+    padding:15px;
+   
+}

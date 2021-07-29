@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.input{
+    padding:5px;
+    outline: none;
+    background-color: rgba(137, 43, 226, 0.418);
+    color:white;
+    border-radius: 10px;
+    margin:10px;
+    width:30%;
+    border-color: none;
+
+}
+
+
+.btn{
+    border-radius: 10px;
+    background-color: rgb(252, 252, 252);
+    color:grey;
+    padding:5px;
+    cursor: pointer;
+}
+
+
+form{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    height:50px;
+    position:fixed;
+}
+
+
+.result{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding-top: 50px;
+    /* height: 90vh; */
+    /* overflow-y: scroll; */
+    z-index: 1;
+}
+
+.header {
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.movieDetails{
+    padding:20px;
+    display: flex;
+    
+    flex-direction: row;
+}
+
+span{
+    color:black;
+}
+h2{
+    color:gray;
+    font-weight: 700;
+}
+
+
+.details-right{
+    margin-left:20px;
+    padding:5px;
+}
+
+.rating{
+    font-weight: 400;
+    font-size: larger;
+}
