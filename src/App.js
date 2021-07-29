@@ -21,7 +21,7 @@ const App = () => {
             setMovie('')
             setImg('#')
             setFrating('')
-            let url = 'http://127.0.0.1:5000/review'
+   
             axios.post("https://imdbscrapperflask.herokuapp.com/review",{search:search.replace(" ","")}).then(({data:{img,movieName,list,frating}})=>{
                 setLoading(false)
                 setImg(img)
@@ -59,7 +59,7 @@ const App = () => {
                 {loading&&<CircularProgress/>}
                 {movie&&(<div className="header">
                     <div className="movieDetails">
-                    <img src={img}/>
+                   {(img!=='#')&& <img src={img} alt="" />}
                     <div className="details-right">
                         <h2>{movie}</h2>
                         <span className='rating'><StarSharp style={{color:"gold"}} />{frating} / 10</span>
