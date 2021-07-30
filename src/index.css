@@ -52,6 +52,8 @@ form{
 
 form>h3{
     flex:1;
+    font-weight: 700;
+    color:rgb(255, 94, 0);
 }
 
 
