@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import StarSharp from '@material-ui/icons/StarSharp';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -11,6 +11,15 @@ const App = () => {
     const [img,setImg] = useState('#')
     const [movie,setMovie] = useState('')
     const [frating,setFrating] = useState('')
+
+    useEffect(()=>{
+        if(loading)
+        {
+            document.getElementById('ip').disabled = true
+        }
+        else
+        document.getElementById('ip').disabled= false;
+    },[loading])
 
     const getReviews =  (e)=>{
         e.preventDefault();
@@ -51,8 +60,9 @@ const App = () => {
     return (
         <div className="home">
             <form onSubmit = {getReviews}>
-                <input type ="text" className='input' onChange = {(e)=>setSearch(e.target.value)}/>
-                <input type="submit" className='btn'/>
+                <h3>ImdbMovieScrapper</h3>
+                <input type ="text" placeholder="Enter the Movie Name" id = 'ip' className='input' onChange = {(e)=>setSearch(e.target.value)} />
+                <input type="submit" id = 'ip' className='btn' disabled={loading} />
             </form>
             <div className="result">
                 
