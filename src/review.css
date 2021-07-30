@@ -31,5 +31,14 @@ h2{
 
 p{
     padding:15px;
+    color:rgba(0, 0, 0, 0.671);
    
+}
+
+.user{
+    color:gray;
+}
+
+.link-more{
+    color:blue;
 }
